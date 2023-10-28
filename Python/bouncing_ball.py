@@ -7,7 +7,7 @@ speed = [1, 1]
 background = 255, 255, 255
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Bouncing ball")
-ball = pygame.image.load("ball.png")
+ball = pygame.image.load(r"E:\GitHub\MDU\Python\ball.png")
 ballrect = ball.get_rect()
 
 while True:
