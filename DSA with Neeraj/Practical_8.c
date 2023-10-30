@@ -88,6 +88,7 @@ int main() {
     
     printf("Enter the number of vertices: ");
     scanf("%d", &vertices);
+    vertices++;
     initializeGraph(vertices);
     
     printf("Enter the number of edges: ");
