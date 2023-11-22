@@ -41,7 +41,7 @@ void deleteElement(int arr[], int *size, int position) {
 }
 
 int main() {
-    int arr[MAX_SIZE], size = 0, choice, position, element;
+    int arr[MAX_SIZE], size = 1, choice, position, element;
 
     do {
         printf("\nLinear Array Operations\n1. Display the array\n2. Insert an element\n3. Delete an element\n4. Exit\nEnter your choice: ");

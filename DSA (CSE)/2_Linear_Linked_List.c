@@ -100,7 +100,7 @@ int main()
         printf("2. Delete element\n");
         printf("3. Display list\n");
         printf("4. Exit\n");
-        printf("Enter your choice: ");
+        printf("> Enter your choice: ");
         scanf("%d", &choice);
 
         switch (choice)

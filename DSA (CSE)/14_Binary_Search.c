@@ -31,7 +31,14 @@ int main()
 {
     int arr[] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
     int size = sizeof(arr) / sizeof(arr[0]);
-    int target = 12;
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    printf("Enter the element you want to search for: ");
+    int target;
+    scanf("%d", &target);
 
     int result = binarySearch(arr, size, target);
 
@@ -46,3 +53,4 @@ int main()
 
     return 0;
 }
+

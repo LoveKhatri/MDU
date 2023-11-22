@@ -20,7 +20,7 @@ void enqueue(int value)
         {
             front = 0;
         }
-        printf("Enqueued %d\n", value);
+        printf("%d Enqueued\n", value);
     }
 }
 
@@ -64,7 +64,7 @@ void display()
     }
     else
     {
-        printf("Queue: ");
+        printf("> ");
         int i = front;
         while (i != rear)
         {
@@ -97,3 +97,4 @@ int main()
 
     return 0;
 }
+
