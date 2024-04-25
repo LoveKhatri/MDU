@@ -12,7 +12,7 @@ find_largest() {
         largest=$num2
     else
         largest=$num3
-    
+    fi
 
     echo "The largest among $num1, $num2, and $num3 is: $largest"
 }
