@@ -7,7 +7,7 @@ calculate_simple_interest() {
     time=$3
 
     # Calculate simple interest
-    interest=$(echo "scale=2; $principal * $rate * $time / 100" | bc)
+    interest=$((principal * rate * time / 100))
 
     echo "Principal amount: $principal"
     echo "Rate of interest: $rate%"
