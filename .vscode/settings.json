@@ -4,5 +4,6 @@
         "random": "c",
         "iostream": "cpp",
         "cmath": "cpp"
-    }
+    },
+    "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\gcc.exe"
 }
