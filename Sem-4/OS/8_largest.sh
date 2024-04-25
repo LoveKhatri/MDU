@@ -24,3 +24,4 @@ read num2
 read num3
 
 # Call the function to find the largest
+find_largest(num1, num2, num3)
