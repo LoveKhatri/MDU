@@ -1,41 +1,36 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.datasets import make_classification
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import precision_score, recall_score, f1_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
-# Create some data
-X = np.random.randn(100, 2)
-y = np.random.randint(0, 2, 100)
+# Generate synthetic data for binary classification
+X, y = make_classification(n_samples=100, n_features=2, n_informative=2, n_redundant=0, n_clusters_per_class=1, random_state=42)
 
 # Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-# Train a model
-model = LogisticRegression()
-model.fit(X_train, y_train)
+# Initialize and train the KNN classifier
+knn = KNeighborsClassifier(n_neighbors=5)
+knn.fit(X_train, y_train)
 
-# Make predictions
-y_pred = model.predict(X_test)
+# Make predictions on the testing set
+y_pred = knn.predict(X_test)
 
-# Calculate the accuracy
-accuracy = np.mean(y_pred == y_test)
-
-# Calculate the precision
+# Calculate performance metrics
+accuracy = accuracy_score(y_test, y_pred)
 precision = precision_score(y_test, y_pred)
-
-# Calculate the recall
 recall = recall_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred)
 
-# Calculate the F1 score
-f1_score = f1_score(y_test, y_pred)
+# Plot the performance metrics
+labels = ['Accuracy', 'Precision', 'Recall', 'F1-score']
+values = [accuracy, precision, recall, f1]
 
-# Plot the results
-metrics = ['Accuracy', 'Precision', 'Recall', 'F1 Score']
-values = [accuracy, precision, recall, f1_score]
-
-plt.bar(metrics, values)
-plt.xlabel("Metric")
-plt.ylabel("Value")
-plt.title("Performance Metrics")
+plt.bar(labels, values, color=['blue', 'green', 'orange', 'red'])
+plt.xlabel('Metrics')
+plt.ylabel('Score')
+plt.title('Performance Metrics')
+plt.ylim(0, 2)  # Set y-axis limits from 0 to 1
 plt.show()
