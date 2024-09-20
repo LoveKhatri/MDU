@@ -1,5 +1,7 @@
 .exe
 
+*.asv
+
 # Prerequisites
 *.d
 
