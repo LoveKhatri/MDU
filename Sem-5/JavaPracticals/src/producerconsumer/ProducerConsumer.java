@@ -1,7 +1,7 @@
 package producerconsumer;
 import java.util.LinkedList;
 
-class ProducerConsumer {
+public class ProducerConsumer {
     LinkedList<Integer> list = new LinkedList<>();
     int capacity = 5;
 
