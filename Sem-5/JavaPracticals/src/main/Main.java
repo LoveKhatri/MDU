@@ -10,7 +10,7 @@ import filecontentuppercase.FileContentUpperCase;
 import analogclock.AnalogClock;
 import scientificcalculator.ScientificCalculator;
 import texteditor.TextEditor;
-import servletcookies.ServletCookies;
+// import servletcookies.ServletCookies;
 import javabean.JavaBean;
 
 public class Main {
@@ -62,7 +62,7 @@ public class Main {
                         new TextEditor().run();
                         break;
                     case 9:
-                        new ServletCookies().run();
+                        // new ServletCookies().run();
                         break;
                     case 10:
                         new JavaBean().run();
