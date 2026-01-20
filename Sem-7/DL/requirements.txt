@@ -1,0 +1,11 @@
+# Core scientific stack
+numpy<2.0
+matplotlib>=3.7
+pandas>=1.5
+
+# Machine learning
+scikit-learn>=1.0
+mlxtend>=0.23
+
+# Deep learning (Windows CPU)
+tensorflow>=2.13,<3
